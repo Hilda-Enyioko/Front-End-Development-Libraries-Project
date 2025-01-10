@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  color: #750303;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: #750303;
+}
+
+#wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #faf4f0;
+  border-radius: 12px;
+  padding: 40px;
+  width: 45%;
+  min-height: 200px;
+}
+
+#text, #author {
+  cursor: text;
+}
+
+#text h2 {
+  text-align: center;
+}
+
+#author p{
+  font-style: italic;
+}
+
+#edit-quote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#new-quote {
+  background-color: #750303;
+  color: #faf4f0;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#new-quote:hover {
+  background-color: #fae9df;
+  color: #750303;
+  border: 1px solid #750303;
+}
+
+#project-credit,
+#project-author {
+  color: #faf4f0;
+  transition: all 0.5s ease;
+}
+
+#project-author:hover {
+  color: #fae9df;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  #quote-box {
+    width: 65%;
+    padding: 30px;
+  }
+
+  
+}
