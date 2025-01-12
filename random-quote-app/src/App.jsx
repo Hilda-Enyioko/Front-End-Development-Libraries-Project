@@ -1,9 +1,11 @@
 import React from 'react'
 
+
 const rapQuotes = [
   {
     quote: 'Climb the ladder to success, escalator style',
-    author: 'Notorious B.I.G.'
+    author: 'Notorious B.I.G.',
+    image: '../images/drake.jpg'
   },
   {
     quote: 'The best part of me is I am not you',
@@ -65,7 +67,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      randomQuote: {}
+      randomQuote: {},
+      quoteTransitions: false
     }
 
     this.fetchQuote= this.fetchQuote.bind(this);
@@ -74,8 +77,16 @@ class App extends React.Component {
   fetchQuote() {
     console.log("fetching quotes...");
     this.setState({
-      randomQuote: getRandomQuote()
+      quoteTransitions: true
     });
+    console.log(this.state.quoteTransitions);
+
+    setTimeout(() => {
+      this.setState({
+        randomQuote: getRandomQuote(),
+        quoteTransitions: false
+      });
+    }, 500);
   }
 
   componentDidMount() {
@@ -87,14 +98,18 @@ class App extends React.Component {
     return (
           <div id="wrapper">
       
-            <div id="quote-box">
+            <div 
+              id="quote-box" 
+              style={{
+                // background: `url(${image})'
+            }}>
       
               <div id="text">
-                <h2>{quote}</h2>
+                <h2 className={'quoteTransitions ? "hidden" : ""'}>{quote}</h2>
               </div>
       
               <div id="author">
-                <p>-{author}</p>
+                <p className={'quoteTransitions ? "hidden" : ""'}>- {author}</p>
               </div>
       
               <div id="edit-quote">
@@ -102,10 +117,17 @@ class App extends React.Component {
                 <div id="share-quote">
       
                   <a id="tweet-quote" 
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${this.state.text}" - ${this.state.author}`)}`} 
-                  target="_blank" rel="noopener noreferrer}"
-                >
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote}" - ${author}`)}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer">
                     <i className="bi bi-twitter"></i>
+                  </a>
+
+                  <a id="whatsapp-quote"
+                  href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`"${quote}" - ${author}`)}`}
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                    <i className="bi bi-whatsapp"></i>
                   </a>
       
                 </div>
