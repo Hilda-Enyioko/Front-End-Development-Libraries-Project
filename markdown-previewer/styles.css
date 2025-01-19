@@ -3,7 +3,9 @@
 }
 
 body {
-    background-color: rgb(233, 255, 255);
+    background-color: rgb(233, 255, 255);   
+    margin: 0;
+    padding: 0;
 }
 
 #textarea {
@@ -12,6 +14,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: 70px auto 50px;
+    transition: all 0.5s;
 }
 
 #textarea label,
@@ -57,4 +60,55 @@ body {
     box-shadow: 1px 1px 10px 2px rgb(74, 163, 163);
     padding: 30px;
     margin-top: 15px;
+}
+
+#preview h1,
+#preview h2,
+#preview p,
+#preview a {
+    font-family: Roboto, sans-serif;
+}
+
+#preview img {
+    width: 100%;
+    margin: 20px auto;
+}
+
+#preview hr {
+    border: 1px solid black;
+}
+
+#preview code {
+    background: white;
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 10px;
+}
+
+footer {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(74, 163, 163);
+    padding: 5px;
+    margin: 20px auto 0;
+    font-weight: 700;
+    box-shadow: 1px 1px 10px 2px rgb(74, 163, 163);
+}
+
+footer p {
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    #textarea {
+        width: 70%;
+    }
+
+    #preview-container {
+        width: 80%;
+    }
+
 }
