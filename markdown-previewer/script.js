@@ -5,6 +5,7 @@ function previewText() {
     const text = editor.value;
     const html = marked(text, { breaks: true });
     preview.innerHTML = html;
+    Prism.highlightAll();
 }
 
 function initializeText() {
@@ -37,3 +38,10 @@ Block Quote
 
 editor.addEventListener('input', previewText);
 initializeText();
+
+const clearButton = document.getElementById('clear-button');
+clearButton.innerText = 'Clear Editor';
+clearButton.addEventListener('click', () => {
+    editor.value = '';
+    preview.innerHTML = '';
+});
