@@ -1,42 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  border: none;
+}
+
+body {
+  background: url(../images/bg-drum2.jpg);
+  background-size: cover;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 75%;
+  height: 70vh;
+  border: 3px solid plum;
+}
+
+#drum-machine {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+#keys {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.key-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drum-pad {
+  height: 90px;
+  width: 90px;
+  border-radius: 8px;
+  border: 3px solid rgb(255, 135, 255);
+  background-color: plum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 900;
+  color: blueviolet;
+  cursor: pointer;
+  box-shadow: blueviolet 3px 3px 5px;
+}
+
+#divider {
+  width: 5px;
+  height: 100%;
+  background-color: plum;
+}
+
+#controls {
+  width: 37%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#toggle-play {
+  background-color: rgb(255, 135, 255);
+  border: 1px solid rgb(255, 135, 255);
+  font-size: 25px;
+  height: 25px;
+  width: 50px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+#toggle-btn {
+  width: 20px;
+  height: 22px;
+  background-color: blueviolet;
+  margin: auto 0;
+}
+
+#display {
+  height: 50px;
+  width: 150px;
+  background-color: rgb(255, 135, 255);
+  color: blueviolet;
+  font-weight: 700;
   text-align: center;
+  border: 2px solid blueviolet;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#volume-control {
+  cursor: pointer;
+  width: 60%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:768px) {
+  body {
+    background: url(../images/bg-drum4.jpg);
+    background-size: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  #root {
+    width: 85%;
+    height: 80vh;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  #drum-machine {
+    flex-direction: column;
+    padding: 20px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  #keys {
+    width: 100%;
+    height: 55%;
+  }
 
-.read-the-docs {
-  color: #888;
+  #divider {
+    width: 100%;
+    height: 5px;
+  }
+
+  #controls {
+    width: 100%;
+    height: 37%;
+  }
 }
