@@ -23,6 +23,8 @@ class App extends React.Component {
   }
 
   handleKeyPress = (event) => {
+    if (!this.state.togglePlay) return;
+
     const key = event.key.toUpperCase();
     console.log(key);
     const keyInfo = keysToDisplay.find(k => k.key === key);
@@ -43,6 +45,8 @@ class App extends React.Component {
   }
 
   handleClick = (key) => {
+    if(!this.state.togglePlay) return;
+
     const keyInfo = keysToDisplay.find(k => k.key === key);
     console.log(keyInfo);
 
@@ -66,13 +70,12 @@ class App extends React.Component {
     console.log(this.state.volume);
   }
 
-  // handlePlay = () => {
-  //   this.setState({
-  //     if (togglePlay) {togglePlay: false}
-  //     else {togglePlay: true}
-  //   }
-  //   )
-  // }
+  handlePlay = () => {
+    this.setState((prevState) => ({
+      togglePlay: !prevState.togglePlay
+    })
+    )
+  }
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyPress);
@@ -152,9 +155,9 @@ class App extends React.Component {
         <div id='controls'>
 
           <div  id='toggle-play'>
-            <div id='toggle-btn' style={
+            <div id='toggle-btn' onClick={this.handlePlay} style={
               {
-                float: 'right'
+                float: this.state.togglePlay ? 'right' : 'left'
               }}>
             </div>
           </div>
