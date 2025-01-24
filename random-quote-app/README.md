@@ -31,4 +31,4 @@ You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and
 
 ---
 ### View Deployed Page Here:
-[https://hilda-drum-machine-app.netlify.app/](https://hilda-drum-machine-app.netlify.app/)
+[https://hilda-drum-machine-app.netlify.app/](https://freecodecamp-random-quote-app.netlify.app/)
