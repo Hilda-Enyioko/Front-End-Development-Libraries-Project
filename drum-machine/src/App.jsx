@@ -8,8 +8,8 @@ const keysToDisplay = [
   {key: 'S', string: 'Heater 6'},
   {key: 'D', string: 'Disc Oh'},
   {key: 'X', string: 'Kick n Hat'},
-  {key: 'Z', string: 'Kick 1'},
-  {key: 'C', string: 'Cev H2'}
+  {key: 'Z', string: 'Kick'},
+  {key: 'C', string: 'Closed HH'}
 ]
 class App extends React.Component {
 
