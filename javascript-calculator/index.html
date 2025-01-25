@@ -6,7 +6,7 @@
 
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Markdown Previewer</title>
+        <title>Pink Calc</title>
         <link rel="stylesheet" href="./styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,116 @@
     </head>
 
     <body>
+
+        <div id="calc">
+
+            <div id="display">
+                <p id="expression">0</p>
+                <p id="answer">0</p>
+            </div>
+
+            <div id="keys">
+
+                <div id="grid1">
+
+                    <div id="clear" class="key1">
+                        <kbd>AC</kbd>
+                    </div>
+
+                    <div id="num1" class="key1">
+
+                        <div id="seven" class="num">
+                            <kbd>7</kbd>
+                        </div>
+
+                        <div id="eight" class="num">
+                            <kbd>8</kbd>
+                        </div>
+
+                    </div>
+
+                    <div id="num2" class="key1">
+
+                        <div id="four" class="num">
+                            <kbd>4</kbd>
+                        </div>
+
+                        <div id="five" class="num">
+                            <kbd>5</kbd>
+                        </div>
+
+                    </div>
+
+                    <div id="num3" class="key1">
+
+                        <div id="one" class="num">
+                            <kbd>1</kbd>
+                        </div>
+
+                        <div id="two" class="num">
+                            <kbd>2</kbd>
+                        </div>
+
+                    </div>
+
+                    <div id="zero" class="key1 num">
+                        <kbd>0</kbd>
+                    </div>
+
+                </div>
+
+                <div id="grid2">
+
+                    <div id="division" class="key2 operation">
+                        <kbd>/</kbd>
+                    </div>
+
+                    <div id="nine" class="key2 num">
+                        <kbd>9</kbd>
+                    </div>
+
+                    <div id="six" class="key2 num">
+                        <kbd>6</kbd>
+                    </div>
+
+                    <div id="three" class="key2 num">
+                        <kbd>3</kbd>
+                    </div>
+
+                    <div id="decimal" class="key2 decimal">
+                        <kbd>.</kbd>
+                    </div>
+
+                </div>
+
+                <div id="grid3">
+
+                    <div id="multiplication" class="key3 operation">
+                        <kbd>x</kbd>
+                    </div>
+
+                    <div id="subtraction" class="key3 operation">
+                        <kbd>-</kbd>
+                    </div>
+
+                    <div id="addition" class="key3 operation">
+                        <kbd>+</kbd>
+                    </div>
+
+                    <div id="equal" class="key3 operation">
+                        <kbd>=</kbd>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Designed and Developed By</p>
+            <a href="https://github.com/Hilda-Enyioko">Hilda Enyioko</a>
+        </footer>
 
         <script src="./script.js"></script>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
