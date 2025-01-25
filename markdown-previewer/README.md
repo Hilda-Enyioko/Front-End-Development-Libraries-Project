@@ -24,4 +24,4 @@ You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and
 
 ---
 ### View Deployed Page:
-[https://fcc-markdown-previewer-app.netlify.app/](https://fcc-markdown-previewer-app.netlify.app/]
+[https://fcc-markdown-previewer-app.netlify.app/](https://fcc-markdown-previewer-app.netlify.app/)
