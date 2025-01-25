@@ -34,3 +34,8 @@ Here are some audio samples you can use for your drum machine:
 - [Kick-n'-Hat](https://cdn.freecodecamp.org/testable-projects-fcc/audio/Kick_n_Hat.mp3)
 - [Kick](https://cdn.freecodecamp.org/testable-projects-fcc/audio/RP4_KICK_1.mp3)
 - [Closed-HH](https://cdn.freecodecamp.org/testable-projects-fcc/audio/Cev_H2.mp3)
+
+
+  ---
+  ### View Deployed Page:
+  [https://hilda-drum-machine-app.netlify.app/](https://hilda-drum-machine-app.netlify.app/)
