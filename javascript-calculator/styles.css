@@ -91,6 +91,7 @@ body {
 .key3 {
     width: 100%;
     gap: 1px;
+    border: none;
 }
 
 .num,
@@ -105,6 +106,7 @@ body {
     color: rgb(68, 2, 68);
     font-weight: 700;
     font-size: 25px;
+    border: none;
 }
 
 #clear {

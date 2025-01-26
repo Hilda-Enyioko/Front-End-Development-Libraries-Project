@@ -5,12 +5,12 @@ const clearButton = document.getElementById('clear');
 const operators = document.querySelectorAll('.operation');
 const equalTo = document.getElementById('equals');
 const decimal = document.getElementById('decimal');
-const numButtons = document.querySelectorAll('[id^="number"]'); // Numbers 0-9
 
 let prevInput = 0;
 let currentInput = 0;
 let currentOutput = 0;
 let currentOperator = null;
+let prevOperator = null;
 let result = 0;
 let expression = "";
 
@@ -29,7 +29,9 @@ function handleInput(event) {
     }
 
     // Prevent inputting multiple zeros at the start
-    if (display.textContent === "0" && key === "0") return;
+    if ((display.textContent === "0" && key === "0") 
+        || (display.textContent === "." && key === ".")
+    ) return;
 
     // Handle appending numbers to the display
     if (answer.textContent === "0" || answer.textContent.includes("=")) {
@@ -49,7 +51,7 @@ function handleInput(event) {
 function handleOperator(event) {
     const key = event.target.textContent;
 
-    // Handle if "=" was pressed before an operator, start a new calculation.
+    // Handle if "=" was pressed before an operator
     if (answer.textContent.includes("=")) {
         answer.textContent = currentInput.toString();
         display.textContent = "0";
@@ -60,8 +62,16 @@ function handleOperator(event) {
     }
 
     // Handle consecutive operators
-    if (currentOperator && expression === "") {
+    if (currentOperator === key && expression === "") {
         answer.textContent = answer.textContent.slice(0, -2) + ` ${key} `;
+        display.textContent = key;
+        currentOperator = key;
+        return;
+    }
+
+    if (currentOperator) {
+        prevOperator = currentOperator;
+        answer.textContent += ` ${key} `;
         display.textContent = key;
         currentOperator = key;
         return;
@@ -70,14 +80,23 @@ function handleOperator(event) {
     answer.textContent += ` ${key} `;
     display.textContent = key;
     prevInput = currentInput;
+    prevOperator = null;
     currentOperator = key;
     expression = "";
 
-    console.log("Current Operator", currentOperator, "Previous Input", prevInput, "Current Input:", currentInput);
+    console.log("Current Operator", currentOperator, "Previous Operator", prevOperator, "Previous Input", prevInput, "Current Input:", currentInput);
 }
 
 function calculate() {
     if (isNaN(currentInput) || isNaN(prevInput)) return;
+
+    let operator = null;
+    
+    if (prevOperator) {
+        operator = prevOperator;
+    } else {
+        operator = currentOperator;
+    }
 
     switch (currentOperator) {
         case "+":
