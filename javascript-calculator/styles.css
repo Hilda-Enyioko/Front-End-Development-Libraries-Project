@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+kbd {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     background-color: rgb(253, 205, 253);
     display: flex;
@@ -19,35 +27,42 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: blueviolet 3px 3px 5px;
-    cursor: pointer;
     margin-top: 50px;
 }
 
-#display, 
+#expression, 
 #keys {
     width: 100%;
 }
 
-#display {
+#expression {
     height: 70px;
     border: 2px solid rgb(253, 205, 253);
-    font-weight: 700;
-    color: rgb(253, 205, 253);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: 2px;
+    gap: 1px;
     padding: 15px;
-    font-family: monospace;
 }
 
-#expression {
-    font-size: 20px;
+#display,
+#answer {
+    width: 97%;
+    font-weight: 700;
+    font-family: monospace;
+    text-align: right;
+    cursor: auto;
 }
 
 #answer {
+    font-size: 20px;
+    color: rgb(253, 181, 253);
+}
+
+#display {
     font-size: 30px;
+    color: rgb(253, 205, 253);
 }
 
 #keys {
@@ -55,6 +70,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 1px;
+    cursor: pointer;
 }
 
 #grid1, 
@@ -96,7 +112,7 @@ body {
     color:rgb(253, 205, 253);
 }
 
-#equal {
+#equals {
     background-color: rgb(68, 2, 68);
     color:rgb(253, 205, 253);
 }
@@ -116,7 +132,7 @@ body {
     box-shadow: inset 0 0 5px rgb(122, 2, 122);
 }
 
-#equal:hover {
+#equals:hover {
     border-color: rgb(255, 205, 255);
 }
 
