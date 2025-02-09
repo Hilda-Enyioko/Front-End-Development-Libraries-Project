@@ -4,7 +4,7 @@
 This project is a **Pomodoro-style timer** that meets the specifications of [freeCodeCamp’s Front End Development Libraries certification](https://www.freecodecamp.org/learn/front-end-development-libraries). The app allows users to set session and break lengths, start/stop the timer, and reset it, following the required user stories.  
 
 ## Live Demo  
-[Click here to see a working version](https://25--5-clock.freecodecamp.rocks).  
+[Click here to see a working version](https://clock.freecodecamp.rocks/s).  
 
 ## Technologies Used  
 - **React** (for UI)  
@@ -37,4 +37,4 @@ The app fulfills the following user stories:
 - **[✔]** `#session-increment`: Increases session time by `1` (max: `60`).  
 - **[✔]** `#session-decrement`: Decreases session time by `1` (min: `1`).  
 - **[✔]** `#start_stop`: Toggles timer start/pause.  
-- **[✔]** `#reset`: Resets all values and st
+- **[✔]** `#reset`: Resets all values and stops audio.
