@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
 #root,
@@ -50,23 +51,13 @@ h1 {
   font-weight: 700;
 }
 
-#break-decrement:hover,
-#break-increment:hover,
-#session-decrement:hover,
-#session-increment:hover,
-#start_stop:hover,
-#reset:hover {
-  border: 2px solid rgb(122, 2, 122);
-}
-
 #break-decrement:active,
 #break-increment:active,
 #session-decrement:active,
 #session-increment:active,
 #start_stop:active,
 #reset:active {
-  transform: scale(0.95);
-  box-shadow: inset 0 0 5px rgb(122, 2, 122);
+  box-shadow: inset 0 0 1px rgb(122, 2, 122);
 }
 
 #timer {
